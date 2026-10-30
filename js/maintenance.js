@@ -56,11 +56,27 @@
     return "OK";
   }
 
-  function addRow(list, label, value) {
+  // Each status gets its own shape as well as a word, so colour is never the only clue.
+  var STATUS_SHAPES = {
+    "OK": { cls: "status-ok", svg: '<circle cx="6" cy="6" r="5.5"/>' },
+    "Due soon": { cls: "status-soon", svg: '<path d="M6 .5 L11.5 11.5 H.5 Z"/>' },
+    "Overdue": { cls: "status-over", svg: '<rect x=".5" y=".5" width="11" height="11"/>' }
+  };
+
+  function addRow(list, label, value, status) {
     var term = document.createElement("dt");
     term.textContent = label;
     var detail = document.createElement("dd");
-    detail.textContent = value;
+    if (status) {
+      var shape = STATUS_SHAPES[status];
+      var badge = document.createElement("span");
+      badge.className = "status " + shape.cls;
+      badge.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">' + shape.svg + "</svg>";
+      badge.appendChild(document.createTextNode(value));
+      detail.appendChild(badge);
+    } else {
+      detail.textContent = value;
+    }
     list.appendChild(term);
     list.appendChild(detail);
   }
@@ -110,7 +126,7 @@
     var list = document.createElement("dl");
     addRow(list, "Next due date", formatDate(dueDate));
     addRow(list, "Days remaining", daysText(daysLeft));
-    addRow(list, "Status", status);
+    addRow(list, "Status", status, status);
     result.appendChild(list);
   });
 })();

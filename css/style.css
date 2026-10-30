@@ -10,6 +10,9 @@
   --border: #d9d0c3;
   --field: #8c8174;
   --link: #a63f00;
+  --ok: #2f6b2f;
+  --soon: #8a5a00;
+  --over: #b3261e;
 
   --font-heading: "Barlow Condensed", "Arial Narrow", sans-serif;
   --font-body: "Barlow", system-ui, sans-serif;
@@ -25,6 +28,9 @@
   --border: #4a4137;
   --field: #8a7f72;
   --link: #ff9a4d;
+  --ok: #7fcf7f;
+  --soon: #f0c14b;
+  --over: #ff8a80;
 }
 
 * {
@@ -216,6 +222,43 @@ a:focus-visible {
 .result dd {
   margin: 0 0 0.5rem;
   font-weight: 600;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.125rem 0.625rem;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+}
+
+.status svg {
+  fill: currentColor;
+}
+
+.status-ok {
+  border-color: var(--ok);
+}
+
+.status-soon {
+  border-color: var(--soon);
+}
+
+.status-over {
+  border-color: var(--over);
+}
+
+.status-ok svg {
+  fill: var(--ok);
+}
+
+.status-soon svg {
+  fill: var(--soon);
+}
+
+.status-over svg {
+  fill: var(--over);
 }
 
 .result-error ul {
