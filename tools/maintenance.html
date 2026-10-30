@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preventive Maintenance Scheduler — Maintenance Tool Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Preventive Maintenance Scheduler</h1>
+    <button type="button" id="theme-toggle">Switch to dark theme</button>
+  </header>
+
+  <main>
+    <p><a href="../index.html">&larr; Back to all tools</a></p>
+    <p class="intro">Enter a vehicle and when it was last serviced to see when its next service is due.</p>
+
+    <form id="scheduler-form" class="tool-form" novalidate>
+      <div class="field">
+        <label for="vehicle-name">Vehicle name</label>
+        <input type="text" id="vehicle-name" name="vehicle-name" placeholder="e.g. Honda Civic">
+      </div>
+
+      <div class="field">
+        <label for="vehicle-type">Type</label>
+        <select id="vehicle-type" name="vehicle-type">
+          <option value="Car">Car</option>
+          <option value="Motorcycle">Motorcycle</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="last-date">Last maintenance date</label>
+        <input type="date" id="last-date" name="last-date">
+      </div>
+
+      <div class="field">
+        <label for="frequency">Maintenance frequency (days)</label>
+        <input type="number" id="frequency" name="frequency" min="1" step="1" inputmode="numeric" placeholder="e.g. 30">
+      </div>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="result" class="result" aria-live="polite"></div>
+  </main>
+
+  <script src="../js/maintenance.js"></script>
+</body>
+</html>

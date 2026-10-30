@@ -12,7 +12,8 @@
 - `index.html` – portal homepage
 - `css/style.css` – shared styles and theme colours
 - `js/theme.js` – light/dark theme toggle, used by every page
-- `tools/` – one page per tool (`tool-1.html` is a placeholder)
+- `js/maintenance.js` – logic for the Preventive Maintenance Scheduler
+- `tools/` – one page per tool (`maintenance.html` is the Preventive Maintenance Scheduler)
 
 Add new folders and files here as they are created.
 
@@ -43,7 +44,7 @@ A portal where students try small tools for car and motorcycle maintenance.
 
 1. **Phase 1:** the portal plus its first tool, the Preventive Maintenance Scheduler.
    - [x] Portal homepage with a placeholder tool card that opens and returns (done)
-   - [ ] Build the Preventive Maintenance Scheduler
+   - [x] Build the Preventive Maintenance Scheduler, replacing the placeholder (done)
    - In: vehicle name, type (car or motorcycle), last maintenance date, frequency in days.
    - Out: next due date, days remaining, status (OK / Due soon / Overdue).
 2. **Phase 2:** more tools, added one at a time.
