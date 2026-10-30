@@ -10,7 +10,7 @@
 - `README.md` – project readme
 - `CLAUDE.md` – this file
 - `index.html` – portal homepage
-- `css/style.css` – shared styles and theme colours
+- `css/style.css` – shared styles and theme colours (Workshop design)
 - `js/theme.js` – light/dark theme toggle, used by every page
 - `js/maintenance.js` – logic for the Preventive Maintenance Scheduler
 - `tools/` – one page per tool (`maintenance.html` is the Preventive Maintenance Scheduler)
@@ -28,6 +28,10 @@ Add new folders and files here as they are created.
 - Explain technical terms in plain language.
 - Ask before making big changes.
 - Ask rather than guess.
+
+## Design
+
+The chosen look is **Workshop**: warm off-white and burnt orange in the light theme, dark brown with a light orange accent in the dark theme. Headings use Barlow Condensed (uppercase), body text uses Barlow, both loaded from Google Fonts. Colours and fonts are variables at the top of `css/style.css`. Status is always shown as text, never by colour alone.
 
 ## Feature Plan
 
