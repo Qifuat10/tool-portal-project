@@ -7,10 +7,12 @@
 
 ## Project Structure
 
-The repository is nearly empty for now.
-
 - `README.md` – project readme
 - `CLAUDE.md` – this file
+- `index.html` – portal homepage
+- `css/style.css` – shared styles and theme colours
+- `js/theme.js` – light/dark theme toggle, used by every page
+- `tools/` – one page per tool (`tool-1.html` is a placeholder)
 
 Add new folders and files here as they are created.
 
@@ -40,6 +42,8 @@ A portal where students try small tools for car and motorcycle maintenance.
 ### Phases
 
 1. **Phase 1:** the portal plus its first tool, the Preventive Maintenance Scheduler.
+   - [x] Portal homepage with a placeholder tool card that opens and returns (done)
+   - [ ] Build the Preventive Maintenance Scheduler
    - In: vehicle name, type (car or motorcycle), last maintenance date, frequency in days.
    - Out: next due date, days remaining, status (OK / Due soon / Overdue).
 2. **Phase 2:** more tools, added one at a time.
